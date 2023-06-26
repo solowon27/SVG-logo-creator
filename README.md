@@ -9,15 +9,20 @@ In this application, you can find the Examples folder that contains the SVG file
 ```here is the tree of the application file structure:```
 
 ```
-.  
+|__ dist/               // index.dev.js generated here
 ├── examples/           // you can find svg files created by the app
 ├── lib/                // here is the folder for classes or functions
     ├── shapes.js       // the main file for rendering shapes
     ├── shapes.test.js  // Jest tests for shapes
+    |__ shapes.dev.js   
+    |__shapes.test.dev.js
 |
 ├── .gitignore          // files and folders to be ignored by git
 ├── index.js            // main file that runs the application using imports from lib/
+|__ LICENSE             // MIT license
+|__ logo.svg            // the logo created by the application
 ├── package.json        // npm package file
+├── package-lock.json   // npm package file
 └── README.md           // the read me file          
 ```
 
