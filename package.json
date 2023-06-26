@@ -1,0 +1,19 @@
+{
+  "name": "02-challenge",
+  "version": "1.0.0",
+  "description": "## Your Task",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "inquirer": "^6.5.1",
+    "test": "^3.3.0"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0"
+  }
+}
