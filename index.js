@@ -34,6 +34,15 @@ const questions = [ //this is our question array to prompt the user for input
       type: 'input',
       name: 'color',
       message: 'Enter desired \x1b[36m color:\x1b[0m ',
+      validate: function (input) {
+        const validColors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet', 'black', 'white', 'gray', 'brown', 'pink', 'purple',];
+        const validHex = /^#[0-9A-F]{6}$/i;
+        if (validColors.includes(input.toLowerCase()) || validHex.test(input)) { //validate the input to be a valid color
+          return true;
+        } else { //if not it will return an error message and ask the user to input again
+          return 'Please enter a valid color.';
+      }
+    }
     },
     {
     type: 'input',
