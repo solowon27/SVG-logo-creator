@@ -2,9 +2,9 @@
 an SVG format logo creator application 
 
 ## Description
-This application is a logo creator that allows the user to create a logo in SVG format. The user can choose the background color, the logo type, and the logo text with color. The user can also download the logo as an SVG file. \
+This application is a logo creator that allows the user to create a logo in SVG format. The user can choose the background color, the logo (shape) type, and the logo text with color.\
 
-```here is the video demo link for the application: https://drive.google.com/file/d/1P9Pz6PE4OP4prbjLrwUfzqszY41_cDbz/view```
+```here is the video demo link for the application:``` https://drive.google.com/file/d/1P9Pz6PE4OP4prbjLrwUfzqszY41_cDbz/view
 
 ```In this application, you can find the Examples folder that contains the SVG files created by this application. ```
 
@@ -35,8 +35,9 @@ you may need to install dependencies using the following command:
 ```npm install inquirer```
 ```npm install fs```
 ## Usage
-To run the application, use the following command:
-```node index.js```
+To use this application, run the following command in the terminal:
+
+```'node index.js'```   
 
 ## License
 This application is licensed under the MIT license.
@@ -47,7 +48,7 @@ Contributions are welcome. you can fork the repo and create a pull request with 
 ## Tests
 To run tests, use the following command: run the following command in the terminal:
 
-```npm test```
+```npm test``` or ```npx jest```
 
 ## Questions
 If you have any questions about the repo, open an issue or contact me directly at solowon27@hotmail.com \
