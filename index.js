@@ -1,10 +1,8 @@
-//welcome to SVG logo creator application
-// i am going to show you the functionality of basic code blocks
 
-const fs = require('fs'); //this a file system which allow us to read and write file
-const inquirer = require('inquirer'); //inquirer module allow us to prompt the user for inputs
+const fs = require('fs'); 
+const inquirer = require('inquirer');
 
-const { Rectangle, Square, Circle } = require('./lib/shapes'); 
+const { Rectangle, Square, Circle, Triangle} = require('./lib/shapes'); 
 
 const messages = [ 
     '\nWelcome to SVG logo creator!',
@@ -12,8 +10,8 @@ const messages = [
     'and you can test the application by running \x1b[32m npm test\x1b[0m or \x1b[32m npx jest\x1b[0m \n',
   ];
   
-  function instruction() {  //this function is include a message that appeared in the begining when the index.js run 
-    let x = 0; //it is just an instruction for a user 
+  function instruction() {  
+    let x = 0;  
   
     const intervalId = setInterval(function () { 
       if (x < messages.length) {
@@ -21,7 +19,7 @@ const messages = [
         x++;
       } else {
         clearInterval(intervalId); 
-        init(); //we have this funnction that will begin the main application and it will execute after the instruction() ended
+        init(); 
       }
     }, 500);
   }
@@ -30,7 +28,7 @@ const questions = [ //this is our question array to prompt the user for input
       type: 'list',
       name: 'type',
       message: 'Select \x1b[36m a shape\x1b[0m',
-      choices: ['rectangle', 'square', 'circle']
+      choices: ['rectangle', 'square', 'circle', 'triangle']
     },
     {
       type: 'input',
@@ -42,10 +40,10 @@ const questions = [ //this is our question array to prompt the user for input
     name: 'text',
     message: 'Enter \x1b[36m text\x1b[0m for logo Name:',
     validate: function (input) {  //validate the input to be exactly three characters
-      if (input.trim().length === 3) {
-        return true;
+      if (input.trim().length < 3) {
+        return 'Please enter at least three characters.';
       } else { //if not it will return an error message and ask the user to input again
-        return 'Please enter exactly three characters.';
+        return true;
       }
     },
     filter: function (input) { //filter the text input to uppercase 
@@ -73,11 +71,14 @@ const questions = [ //this is our question array to prompt the user for input
       case 'circle':
         shape = new Circle(type, color, text, textColor);
         break;
+        case 'triangle':
+        shape = new Triangle(type, color, text, textColor);
+        break;
       default:
         throw new Error(`Invalid shape type: ${type}`);
     }
   
-    fs.writeFile('logo.svg', shape.render(), err => {  //fs.writeFile allow us here to write a logo.svg in our directory
+    fs.writeFile('./lib/logo.svg', shape.render(), err => {  //fs.writeFile allow us here to write a logo.svg in our directory
       if (err) throw err;
       console.log('logo.svg created!');
     });
