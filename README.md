@@ -12,10 +12,9 @@ In this application, you can find the Examples folder that contains the SVG file
 |__ dist/               // index.dev.js generated here
 ├── examples/           // you can find svg files created by the app
 ├── lib/                // here is the folder for classes or functions
+    ├── dist            // the file which contain shapes.dev.js and shapes.test.dev.js
     ├── shapes.js       // the main file for rendering shapes
     ├── shapes.test.js  // Jest tests for shapes
-    |__ shapes.dev.js   
-    |__shapes.test.dev.js
 |
 ├── .gitignore          // files and folders to be ignored by git
 ├── index.js            // main file that runs the application using imports from lib/
