@@ -17,11 +17,11 @@ This application is a logo creator that allows the user to create a logo in SVG 
     ├── dist            // the file which contain shapes.dev.js and shapes.test.dev.js
     ├── shapes.js       // the main file for rendering shapes
     ├── shapes.test.js  // Jest tests for shapes
+    |__ logo.svg            // the logo created by the application
 |
 ├── .gitignore          // files and folders to be ignored by git
 ├── index.js            // main file that runs the application using imports from lib/
 |__ LICENSE             // MIT license
-|__ logo.svg            // the logo created by the application
 ├── package.json        // npm package file
 ├── package-lock.json   // npm package file
 └── README.md           // the read me file          
