@@ -4,7 +4,7 @@ an SVG format logo creator application
 ## Description
 This application is a logo creator that allows the user to create a logo in SVG format. The user can choose the background color, the logo (shape) type, and the logo text with color.\
 
-```here is the video demo link for the application:``` https://drive.google.com/file/d/1P9Pz6PE4OP4prbjLrwUfzqszY41_cDbz/view
+```here is the video demo link for the application:``` https://drive.google.com/file/d/1Y5vAPnsS1rpIrqBBBDOgCX8_IkFivBNC/view
 
 ```In this application, you can find the Examples folder that contains the SVG files created by this application. ```
 
