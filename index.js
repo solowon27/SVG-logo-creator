@@ -1,9 +1,5 @@
 //hello welcome to the SVG logo creator application 
-//i am going to show you the functionality of some code blocks and 
-//we will test our application using npx jest or npm test
-//finally we run application to create a logo using SVG format
-//lets go
-
+//i am going to show you the functionality of some code blocks
 
 const fs = require('fs'); //this is our file system module which allow us to read and write files
 const inquirer = require('inquirer'); //inquirer module to prompt the user for input
@@ -41,9 +37,8 @@ const questions = [ //this is our question array to prompt the user for input
       name: 'color',
       message: 'Enter desired \x1b[36m color:\x1b[0m even using hex color code ',
       validate: function (input) {
-        const validColors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet', 'black', 'white', 'gray', 'brown', 'pink', 'purple',];
         const validHex = /^#[0-9A-F]{6}$/i; //this is the reqular expression to validate the hex color
-        if (validColors.includes(input.toLowerCase()) || validHex.test(input)) {  //check if the input is either valid hex color or valid color name 
+        if (input.trim() !== '' || validHex.test(input)) {  //check if the input is either valid hex color or non empty string
           return true;
         } else { 
           return 'Please enter a valid color.';
