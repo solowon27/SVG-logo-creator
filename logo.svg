@@ -1,8 +1,0 @@
-
-      <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-        <g transform="translate(0,0)">
-          <rect width="200px" height="200px" fill="yellow" x="50%" y="50%" transform="translate(-100, -100)"></rect> 
-          <text x="50%" y="50%" text-anchor="middle" fill="red" font-size="50px">123</text>
-        </g>
-      </svg>
-    
